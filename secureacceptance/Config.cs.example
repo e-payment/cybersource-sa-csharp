@@ -1,0 +1,10 @@
+﻿namespace secureacceptance
+{
+    public static class Config
+    {
+        public static string MERCHANT_ID = "<MERCHANT_ID>";
+        public static string PROFILE_ID  = "<PROFILE_ID>";
+        public static string ACCESS_KEY  = "<ACCESS_KEY>";
+        public static string SECRET_KEY  = "<SECRET_KEY>";
+    }
+}

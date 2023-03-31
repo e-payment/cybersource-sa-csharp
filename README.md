@@ -12,7 +12,7 @@
 ## Testing
 
 ```
-CARD TYPE	CARD NO             EXP      CVV    BANK     OTP
+CARD TYPE   CARD NO             EXP      CVV    BANK     OTP
 VISA        4456530000001096    12/30    111    Other    Y
 VISA        4456530000001005    12/30    111    Other    N
 MASTER      5200000000003092    12/30    111    Other    Y
