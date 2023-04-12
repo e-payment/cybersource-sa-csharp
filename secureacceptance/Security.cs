@@ -7,8 +7,6 @@ namespace secureacceptance
 {
     public static class Security
     {
-        // private String SECRET_KEY = secureacceptance.Config.SECRET_KEY; // "<REPLACE WITH SECURITY KEY>";
-
         public static String sign(IDictionary<string, string> paramsArray, String secretKey)  {
             return sign(buildDataToSign(paramsArray), secretKey);
         }

@@ -3,6 +3,11 @@
     public static class Config
     {
         public static string MERCHANT_ID = "<MERCHANT_ID>";
+        public static string ENVIRONMENT = "TEST"; // TEST, LIVE
+        public static string CANCEL_PAGE_URL  = "https://httpbin.org/post";
+        public static string RECEIPT_PAGE_URL = "https://httpbin.org/post";
+
+        // reneval every 2 years
         public static string PROFILE_ID  = "<PROFILE_ID>";
         public static string ACCESS_KEY  = "<ACCESS_KEY>";
         public static string SECRET_KEY  = "<SECRET_KEY>";

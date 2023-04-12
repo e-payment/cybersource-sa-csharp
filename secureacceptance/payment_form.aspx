@@ -1,9 +1,5 @@
-﻿<%@ Page Title="Home Page" Language="C#" AutoEventWireup="true"
-    CodeFile="payment_form.aspx.cs" Inherits="secureacceptance._Default" %>
-<%
-    /** configuration **/
-    string responsePage = "https://httpbin.org/post";
-%>
+﻿<%@ Page Title="Home Page" Language="C#" AutoEventWireup="true" CodeFile="payment_form.aspx.cs" Inherits="secureacceptance._Default" %>
+
 <html>
 <head>
     <title>Secure Acceptance - Payment Form Example</title>
@@ -17,8 +13,8 @@
     <input type="hidden" name="access_key" value="<%= secureacceptance.Config.ACCESS_KEY %>">
     <input type="hidden" name="transaction_uuid" value="<% Response.Write(getUUID()); %>">
     <input type="hidden" name="merchant_descriptor"  value="Krungsri">
-    <input type="hidden" name="override_custom_cancel_page"  value="<%= responsePage %>">
-	<input type="hidden" name="override_custom_receipt_page" value="<%= responsePage %>">
+    <input type="hidden" name="override_custom_cancel_page"  value="<%= secureacceptance.Config.CANCEL_PAGE_URL %>">
+	<input type="hidden" name="override_custom_receipt_page" value="<%= secureacceptance.Config.RECEIPT_PAGE_URL %>">
     <input type="hidden" name="signed_field_names" value="profile_id,access_key,transaction_uuid,signed_field_names,unsigned_field_names,signed_date_time,locale,payment_method,transaction_type,reference_number,auth_trans_ref_no,amount,currency,merchant_descriptor,override_custom_cancel_page,override_custom_receipt_page">
     <input type="hidden" name="unsigned_field_names" value="device_fingerprint_id,bill_to_forename,bill_to_surname,bill_to_email,bill_to_phone,bill_to_address_line1,bill_to_address_line2,bill_to_address_city,bill_to_address_state,bill_to_address_country,bill_to_address_postal_code,customer_ip_address">
     <input type="hidden" name="signed_date_time" value="<% Response.Write(getUTCDateTime()); %>">
@@ -28,8 +24,8 @@
         <div id="paymentDetailsSection" class="section">
             <span>payment_method:</span><input type="text" name="payment_method" value="card" size="25"><br/>
             <span>transaction_type:</span><input type="text" name="transaction_type" size="25"><br/>
-            <span>reference_number:</span><input type="text" name="reference_number" size="25"><br/>
-            <span>auth_trans_ref_no:</span><input type="text" name="auth_trans_ref_no" size="25"><br/>
+            <span><u>reference_number</u>:</span><input type="text" name="reference_number" size="25"><br/>
+            <span><u>auth_trans_ref_no</u>:</span><input type="text" name="auth_trans_ref_no" size="25"><br/>
             <span>amount:</span><input type="text" name="amount" size="25"><br/>
             <span>currency:</span><input type="text" name="currency" size="25"><br/>
             <span>locale:</span><input type="text" name="locale" value="en-us" size="25"> en-us | th-th | ja-jp
